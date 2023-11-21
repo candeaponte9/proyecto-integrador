@@ -1,0 +1,119 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+
+/* Seccion galeria de productos */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+    gap: 2rem;
+}
+
+.row {
+    position: relative;
+    transition: all .40s;
+
+    img {
+        width: 100%;
+        height: auto;
+        transition: all .40s;
+    }
+
+    img:hover {
+        transform: scale(0.9);
+    }
+}
+
+.texto-producto {
+    h5 {
+        position: absolute;
+        top: 13px;
+        left: 13px;
+        color: white;
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+        background-color: var.$secondary-color;
+        padding: 3px 10px;
+        border-radius: 2px;
+    }
+}
+
+.icono-corazon {
+    position: absolute;
+    right: 0;
+}
+
+.icono-corazon:hover {
+    transform: scale(1.1);
+}
+
+.precio {
+    h4 {
+        font-size: 16px;
+        text-transform: capitalize;
+        font-weight: 400;
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
+
+/* Seccion opinion de clientes */
+.opinion-clientes {
+    background-color: var.$primary-color;
+
+    .opiniones {
+        text-align: center;
+        color: white;
+
+        h3 {
+            font-size: 18px;
+            text-transform: capitalize;
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        p {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 25px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 16px;
+            font-weight: 400;
+            text-transform: capitalize;
+            margin-bottom: 2px;
+        }
+    }
+}
+
+/* Seccion de noticias */
+.not-texto-central {
+    text-align: center;
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.seccion-noticias {
+    text-align: center;
+
+    .noticias {
+        img {
+            width: 380px;
+            height: auto;
+            border-radius: 5px;
+            margin: 15px;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+}
+
+

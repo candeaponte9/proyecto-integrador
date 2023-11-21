@@ -1,0 +1,21 @@
+@use "./variables" as var;
+
+// Mixin para centrar elementos
+@mixin center-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Mixin para resetear listas
+@mixin reset-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+@mixin header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

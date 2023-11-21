@@ -1,0 +1,70 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+.navmenu {
+    display: flex;
+
+    a {
+        color: white;
+        font-size: 16px;
+        text-transform: capitalize;
+        padding: 10px 20px;
+        font-weight: 400;
+        transition: color .42s ease;
+    }
+
+    a:hover {
+        color: var.$secondary-color;
+    }
+}
+
+.nav-iconos {
+    display: flex;
+    align-items: center;
+
+    i {
+        margin-right: 20px;
+        transition: all .42 ease;
+    }
+
+    i:hover {
+        transform: scale(1.1);
+    }
+}
+
+#menu-icono {
+    z-index: 10001;
+    cursor: pointer;
+}
+
+header.sticky {
+    background: black;
+    padding: 10px 10%;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+}
+
+@media(max-width:750px) {
+    .navmenu {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 300px;
+        height: 130vh;
+        background: var.$background-color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 120px 30px;
+        transition: all .42s;
+
+        a {
+            color: black;
+            display: block;
+            margin: 18px 0;
+        }
+    }
+
+    .navmenu.open{
+        right: 0;
+    }
+}
